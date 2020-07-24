@@ -21,7 +21,7 @@ jobs:
       - name: Sanity check
         run: ls -lah
       - name: Run repolinter
-        uses: .github/actions/repolinter-action
+        uses: ./.github/actions/repolinter-action
         with:
           config-url: https://raw.githubusercontent.com/aperture-science-incorporated/.github/master/repolinter.json
       
