@@ -15,7 +15,7 @@ jobs:
         uses: actions/checkout@v2
         with:
           repository: newrelic/repolinter-action
-          ref: 'main'
+          ref: 'develop'
           token: ${{ secrets.PERSONAL_TOKEN }}
           path: .github/actions/repolinter-action
       - name: Sanity check
@@ -23,7 +23,7 @@ jobs:
       - name: Run repolinter
         uses: ./.github/actions/repolinter-action
         with:
-          config-url: https://raw.githubusercontent.com/aperture-science-incorporated/.github/master/repolinter.json
+          config-url: https://raw.githubusercontent.com/aperture-science-incorporated/.github/master/repolinter-newrelic-communityplus.json
           token: ${{ secrets.PERSONAL_TOKEN }}
           output-type: issue
       
