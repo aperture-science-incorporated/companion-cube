@@ -1,7 +1,10 @@
 name: test-repolinter-action
 on:
   push:
-    branches: [ $default-branch ]
+    branches:
+      - master
+      - main
+      - trunk
 
 jobs:
   repolint:
