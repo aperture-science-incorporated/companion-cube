@@ -15,7 +15,7 @@ jobs:
       - name: Checkout self
         uses: actions/checkout@v2
       - name: Run Repolinter
-        uses: repolinter-action@v1
+        uses: newrelic/repolinter-action@v1.0.1
         with:
           config-url: https://raw.githubusercontent.com/aperture-science-incorporated/.github/master/repolinter-newrelic-communityplus.json
           output-type: issue
