@@ -22,10 +22,10 @@ jobs:
             core.debug(JSON.stringify(context))
             return data.data && data.data["default_branch"] === context.ref.split('/').slice(-1)[0]
       - name: Checkout self
-        if: ${{ steps.default-branch.outputs.result == true }}
+        if: ${{ steps.default-branch.outputs.result == 'true' }}
         uses: actions/checkout@v2
       - name: Run Repolinter
-        if: ${{ steps.default-branch.outputs.result == true }}
+        if: ${{ steps.default-branch.outputs.result == 'true' }}
         uses: newrelic/repolinter-action@v1
         with:
           config_url: https://raw.githubusercontent.com/aperture-science-incorporated/.github/master/repolinter-newrelic-communityplus.json
