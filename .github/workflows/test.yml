@@ -20,7 +20,7 @@ jobs:
             const data = await github.repos.get(context.repo)
             core.debug(JSON.stringify(data))
             core.debug(JSON.stringify(context))
-            return data.data && data.data["default_branch"] === context.ref
+            return data.data && data.data["default_branch"] === context.ref.split('/').slice(-1)[0]
       - name: Checkout self
         if: ${{ steps.default-branch.outputs.result == true }}
         uses: actions/checkout@v2
