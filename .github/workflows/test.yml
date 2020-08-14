@@ -12,9 +12,18 @@ jobs:
     name: repolint
     runs-on: ubuntu-latest
     steps:
+      - name: Get Repository Info
+        id: default-branch
+        uses: actions/github-script@v2
+        with:
+          script: |
+            const data = await github.repos.get(context.repo)
+            return data.data && data.data["default_branch"] === context.ref
       - name: Checkout self
+        if: ${{ steps.default-branch.outputs.result }}
         uses: actions/checkout@v2
       - name: Run Repolinter
+        if: ${{ steps.default-branch.outputs.result }}
         uses: newrelic/repolinter-action@v1
         with:
           config_url: https://raw.githubusercontent.com/aperture-science-incorporated/.github/master/repolinter-newrelic-communityplus.json
