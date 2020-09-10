@@ -25,7 +25,7 @@ jobs:
         uses: actions/checkout@v2
       - name: Run Repolinter
         if: ${{ steps.default-branch.outputs.result == 'true' }}
-        uses: newrelic/repolinter-action@v1
+        uses: newrelic/repolinter-action@feat/custom-working-dir
         with:
           config_url: https://raw.githubusercontent.com/prototypicalpro/.github/main/repolinter-rulesets/doesntexist.json
           output_type: issue
