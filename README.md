@@ -10,5 +10,5 @@ Standard policy and procedure across the New Relic GitHub organization.
  * [Typo URL](example.com/notapath)
  * [New Relic Discuss Topic](https://discuss.newrelic.com/companion-cube)
  * [Security Policy](../../security/policy)
- * [Private Google Drive Link](https://docs.google.com/presentation/d/1UB_o3KtnzpBseklmSTiEz1yYJtvK4AEUoy6NKjnEBlQ/edit?usp=sharing)
  * [Private Source Link](https://source.datanerd.us)
+ * [Relative Section Link](#useful-links)
