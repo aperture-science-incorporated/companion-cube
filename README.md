@@ -6,7 +6,7 @@ Standard policy and procedure across the New Relic GitHub organization.
 
 #### Useful Links
  * [Code of Conduct](./CODE_OF_CONDUCT.md)
- * [License](./LICENSE)
+ * [License](./LICENCE)
  * [Typo URL](example.com/notapath)
  * [New Relic Discuss Topic](https://discuss.newrelic.com/companion-cube)
  * [Security Policy](../../security/policy)
