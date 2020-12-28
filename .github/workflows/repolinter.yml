@@ -25,7 +25,7 @@ jobs:
         uses: actions/checkout@v2
       - name: Run Repolinter
         if: ${{ steps.default-branch.outputs.result == 'true' }}
-        uses: prototypicalpro/repolinter-action@fix/switch-to-ghcr
+        uses: prototypicalpro/repolinter-action@14371508d598bd60bdaf4c222738a5446992885d
         with:
           config_file: test_policy.yaml
           output_type: issue
