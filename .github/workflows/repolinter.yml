@@ -25,7 +25,7 @@ jobs:
         uses: actions/checkout@v2
       - name: Run Repolinter
         if: ${{ steps.default-branch.outputs.result == 'true' }}
-        uses: prototypicalpro/repolinter-action@926b8a35f93a9ff4d5e15b0253cdca1de9dd14f6
+        uses: prototypicalpro/repolinter-action@27835f004a2c34c4e2b11b5f669e06b3390ad858
         with:
           config_file: test_policy.yaml
           output_type: issue
